@@ -1,4 +1,4 @@
-const PORT = 5050;
+const PORT = process.env.PORT || 5050;
 
 // Import avec "require"
 const express = require("express");
