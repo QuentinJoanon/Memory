@@ -1,3 +1,5 @@
+/* -- GENERAL -- */
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     background-color: black;
@@ -5,16 +7,27 @@ body {
     height: 100%;
 }
 
-footer {
-    background-color: black;
+.sphere1, .sphere2 {
+    background-color:#E0A800;
+    border-radius: 50%;
     position: fixed;
-    bottom: 0px;
-    height: 30px;
-    width: 100%;
-    text-align: center;
-    font-size: 0.8em;
-    font-style: italic;
+    z-index: -1;
 }
+
+.sphere1 {
+    width: 120px;
+    height: 120px;
+    left: -20px;
+    top: 270px;
+}
+
+.sphere2 {
+    width: 200px;
+    height: 200px;
+    right: -50px;
+    top: 350px;
+}
+/* -- HEADER -- */
 
 h1 {
     text-align: center;
@@ -61,6 +74,8 @@ li a {
     font-size: 1.2em;
 }
 
+/* -- FORM -- */
+
 form {
     display:flex;
     flex-direction: column;
@@ -73,7 +88,7 @@ main p {
 }
 
 .input-photo {
-    	width: 0.1px;
+    width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
 	overflow: hidden;
@@ -117,7 +132,7 @@ main p {
     padding: 1em;
     font-weight: 700;
     font-size: 1em;
-
+    
 }
 
 /* -- GALLERY -- */
@@ -131,7 +146,7 @@ main p {
     flex: 25%;
     max-width: 25%;
     margin: 1em;
-
+    
 }
 
 .picture-case__picture {
@@ -139,38 +154,31 @@ main p {
     width: 100%;
 }
 
-.sphere1, .sphere2 {
-    background-color:#E0A800;
-    border-radius: 50%;
+/* -- FOOTER -- */
+
+footer {
+    background-color: black;
     position: fixed;
-    z-index: -1;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
 }
 
-.sphere1 {
-    width: 120px;
-    height: 120px;
-    left: -20px;
-    top: 270px;
-}
-
-.sphere2 {
-    width: 200px;
-    height: 200px;
-    right: -50px;
-    top: 350px;
-}
+/* -- RESPONSIVE -- */
 
 @media screen and (max-width: 800px) {
     .gallery__picture-case {
       flex: 50%;
       max-width: 50%;
     }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+}
+
   @media screen and (max-width: 600px) {
     .gallery__picture-case {
-      flex: 100%;
+        flex: 100%;
       max-width: 100%;
     }
-  }
+}
